@@ -13,7 +13,7 @@ nav {
 }
 
 nav a {
-    font-size: large;
+  font-size: large;
   text-decoration: none;
   color:brown;
   font-weight: bold;
@@ -87,14 +87,15 @@ article h3 {
 .books figure {
   margin: 0;
   align-content: center;
-  color: aqua;
-  text-decoration: overline;
-  text-decoration-color: blueviolet;
 }
 
 article figure figcaption {
-  margin-top: 5px;
-  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: palegreen;
+  text-decoration: overline;
+  text-decoration-color: orange;
 }
 
 footer {
@@ -102,6 +103,6 @@ footer {
   min-height: 30px;
   font-size: 50px;
   font-weight: lighter;
-  text-align: right;
+  text-align: center;
   font-style: italic;
 }
