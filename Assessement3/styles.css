@@ -1,5 +1,7 @@
 body {
   font-family: "Courier New", Courier, monospace;
+  padding: 0;
+  margin: 0;
 }
 
 nav {
@@ -24,14 +26,14 @@ nav a:hover {
 
 #wrapper {
   margin-top: 50px;
-  float: right;
   width: 60%;
   margin-right: 50px;
+  margin-left: auto;
 }
 
 header img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 header h1 {
