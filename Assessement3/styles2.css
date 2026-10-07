@@ -1,0 +1,109 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav {
+  margin-top: 50px;
+  margin-left: 50px;
+  float: right;
+  width: 15%;
+  line-height: 15px;
+  position: static;
+}
+
+nav a {
+  text-decoration: dotted;
+  color:aqua;
+  font-weight: bold;
+  display: flex;
+}
+
+nav a:hover {
+  color:deeppink;
+  text-decoration: line-through;
+}
+
+#wrapper {
+  margin-top: 50px;
+  float: right;
+  width: 60%;
+  margin-right: 50px;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+}
+
+header h1 {
+  text-align: right;
+  font-size: 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  color: chartreuse;
+}
+
+header h2 {
+  margin-top: 20px;
+  margin-bottom: 60px;
+  text-align: left;
+  font-size: 30px;
+  color:coral;
+}
+
+header h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+  color:dodgerblue;
+}
+
+section {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+article h3 {
+  margin-bottom: 10px;
+  color: dodgerblue;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+  height: auto;
+  gap: 16px;
+}
+
+.books img {
+  display: block;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+}
+
+.books figure {
+  margin: 0;
+}
+
+article figure figcaption {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+em {
+    color:aquamarine;
+    text-decoration: underline;
+}
+
+footer {
+  margin-top: 20px;
+  min-height: 30px;
+  font-size: 15px;
+  font-weight: light;
+  text-align: left;
+  font-style: oblique;
+  color: darksalmon;
+}

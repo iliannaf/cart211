@@ -1,0 +1,107 @@
+body {
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+nav {
+  margin-top: 50px;
+  margin-left: 20px;
+  float:none;
+  width: 15%;
+  line-height: 15px;
+  position: fixed;
+  letter-spacing: 20%;
+}
+
+nav a {
+    font-size: large;
+  text-decoration: none;
+  color:brown;
+  font-weight: bold;
+  display: block;
+}
+
+nav a:hover {
+  color: blueviolet;
+  text-align: center;
+}
+
+#wrapper {
+  margin-top: 50px;
+  float: none;
+  width: 60%;
+  margin-right: 50px;
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+}
+
+header h1 {
+  text-align: right;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  text-align: right;
+  font-size: 20px;
+  color: blueviolet;
+}
+
+header h3 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 20px;
+  color: blueviolet;
+}
+
+section {
+  margin-bottom: 30px;
+  text-align: end;
+}
+
+article h3 {
+  margin-bottom: 10px;
+  color: blueviolet;
+}
+
+.books {
+  display:inline;
+  grid-template-columns: auto auto auto;
+  max-width: 100%;
+  height: auto;
+  gap: 16px;
+}
+
+.books img {
+  display:flow-root;
+  width: 100%;
+  height: 100%;
+  object-fit:fill;
+}
+
+.books figure {
+  margin: 0;
+  align-content: center;
+  color: aqua;
+  text-decoration: overline;
+  text-decoration-color: blueviolet;
+}
+
+article figure figcaption {
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 20px;
+  min-height: 30px;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: right;
+  font-style: italic;
+}
