@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px;
+      }
+
+      /* video size buttons */
+
+      /* adds space below the group of buttons */
+      .size-controls {
+        margin-bottom: 15px;
+      }
+      /* Styles all the button inside the size-controls section */
+      .size-controls button {
+        padding-top: 8px 14px;
+        /* adds space between buttons */
+        margin: 3px;
+        /* changes the cursor pointer to a hand */
+        cursor: pointer;
+      }
+
+      /* general video player styles */
+      video {
+        display: block;
+        width: 100%;
+        /* this prevents the video from exceeding the available screen width */
+        max-width: 100%;
+        height: auto;
+        background-color: black;
+        /* makes changes in the video width appear smoothly */
+        transition: width 0.3s ease;
+      }
+
+      /* different video sizes */
+      /* small video: 320 pixels wide */
+      video.small {
+        width: 320px;
+      }
+
+      /* medium videos: 480 pixels wide */
+      video.medium {
+        width: 480px;
+      }
+
+      /* large videos: 720 pixels wide */
+      video.large {
+        width: 720px;
+      }
+
+      /* full width video: fills the available space */
+      video.full {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Beautiful Building</h1>
+    <h3>Video by Clement Proust</h2>
+    <p>
+      "Discover the vintage charm of Derry Guildhall, a landmark in Northern
+      Ireland."
+    </p>
+    <p>Watch the video - Choose your size</p>
+
+    <!-- Video size control buttons -->
+    <div class="size-controls">
+      <strong>Video Size:</strong>
+
+      <!-- When clicked, calls the JS function and changes the video width to 320 pixels -->
+      <button onclick="changeSize('small')">Small</button>
+
+      <!-- When clicked, calls the JS function and changes the video width to 480 pixels -->
+      <button onclick="changeSize('medium')">Medium</button>
+
+      <!-- When clicked, calls the JS function and changes the video width to 720 pixels -->
+      <button onclick="changeSize('large')">Large</button>
+
+      <!-- When clicked, calls the JS function and changes the video width to MAX pixels -->
+      <button onclick="changeSize('full')">Full</button>
+    </div>
+
+    <!-- Video Player -->
+    <!-- id="myVideo" gives the video a unique name that JS can use to find it -->
+    <!-- class="full" makes the video start at full width -->
+    <!-- controls display the built-in play, pause, volume and other video controls -->
+
+    <video id="myVideo" class="full" controls>
+      <source src="video.mp4" type="video/mp4" />
+      Sorry, your browser cannot play this video
+    </video>
+
+    <!-- Javascript: change video size -->
+    <script>
+      // This function runs whenever a size button is clicked.
+      // The word "size" receives the value from the button such as 'small', 'medium', 'large' and 'full'.
+
+      function changeSize(size) {
+        // Finds the video element using its unique name
+        const video = document.getElementById("myVideo");
+        // Removes all four possible size classes
+        // This prevents old size settings from remaining active
+        video.classList.remove("small", "medium", "large", "full");
+        // Adds the new size class selected by the visitor.Adds
+        // The css then applies the matching width
+        video.classList.add(size);
+      }
+    </script>
+  </body>
+</html>
