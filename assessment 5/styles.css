@@ -158,6 +158,8 @@ nav a:hover {
 /* Section and articles */
 
 section {
+  padding-right: 30px;
+  padding-left: 30px;
   margin-bottom: 30px;
   text-align: justify;
 }
@@ -176,6 +178,7 @@ article h3 {
 
 /* Footer */
 footer {
+  padding-right: 10px;
   margin-top: 20px;
   min-height: 30px;
   font-size: 10px;
