@@ -79,6 +79,30 @@ body {
   display: block;
 }
 
+/* Hide the Hamburger menu by default on desktop */
+.hamburger-menu {
+  display: none;
+  /* mobile media query will display it */
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: gray;
+}
+
+.hamburger-menu button .fa-bars {
+  cursor: pointer;
+}
+
+/* Hide the close button by default */
+.close-menu {
+  display: none;
+}
+
 /* Main Content and headings */
 
 #wrapper {
@@ -190,6 +214,30 @@ footer {
 footer a {
   text-decoration: none;
   color: black;
+}
+
+/* Story Page layout */
+
+/* Left column f the story page */
+.left_stories {
+  /* Span 5 grid columns, from line 1 to 6 */
+  grid-column: 1 / 6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Right column containing the story text */
+.stories {
+  grid-column: 7 / 13;
+  margin: 0;
+  padding: 0;
+  /* Increase text size by 20% */
+  font-size: 1.2em;
+  line-height: 1.5em;
+}
+
+.stories p {
+  margin-top: 0;
 }
 
 /* Desktop image grid */
@@ -337,4 +385,215 @@ footer a {
 .im14 {
   /* place image 14 in columns 10 through 12 */
   grid-column: 10 / 13;
+}
+
+/* END OF THE IMAGE GRID */
+
+/* social media container */
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  /* Arrange these icons in a row */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: white;
+  font-size: 15px;
+  text-decoration: none;
+  border-radius: 50%;
+
+  /* adds a smooth animation when the icons transform or shadow changes */
+  transition: 0.3s ease;
+  box-shadow: 0.3s ease;
+  /* transform animates movement, rotation, or scaling over 0.3 seconds */
+}
+
+/* Individual brand colours */
+
+.facebook {
+  background: #1877f2;
+}
+
+.instagram {
+  /* sets the gradient direction to 45 degrees */
+  background: linear-gradient(
+    45deg,
+    #feda75,
+    #fa7e1e,
+    #d62976,
+    #962fbf,
+    #4f5bd5
+  );
+}
+
+.twitter {
+  background: black;
+}
+
+.tiktok {
+  background: #111111;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.linkedin {
+  background: #0a66c2;
+}
+
+.github {
+  background: #24292f;
+}
+
+/* hover effects */
+
+.social:hover {
+  /* moves the icon upward by 6px and also enlarges it by 8% */
+  transform: translateY(-6px) scale(1.08);
+  /* adds shadow display has values horizontal offset, vertical offset, blur radius and shadow color */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Keyboard accessibility - applies these styles when the icon is focused using keyboard navigation, 
+such as the Tab key */
+.social:focus-visible {
+  /* adds a 3px lightblue outline around the icon to indicate keyboard focus */
+  outline: 3px solid #38bdf8;
+  /* Adds a 5px of space between the outline and the icon */
+  outline-offset: 5px;
+}
+
+/* Credits */
+.credits {
+  margin-top: 10px;
+  font-size: 1em;
+  width: 100%;
+}
+
+/* responsive design */
+@media (max-width: 1024px) {
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu1 a,
+  .menu1 a:hover {
+    text-decoration: none;
+    color: gray;
+    background-color: transparent;
+  }
+
+  /* Hide the menu until it is opened */
+  .menu1 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    /* stacks menu links vertically */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .menu1 a {
+    padding: 20px;
+  }
+
+  /* display the close menu button */
+  .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: gray;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    /* keep the menu in place while scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    padding-top: 50px;
+  }
+
+  .menu1 .active {
+    color: black;
+  }
+
+  /* remove any grid column placement from the hamburger */
+  .hamburger-menu {
+    /* let the browser position it automatically in a grid */
+    grid-column: auto;
+  }
+
+  button {
+    border-width: 0px;
+    background-color: white;
+  }
+
+  nav {
+    margin: 0;
+    margin-bottom: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    line-height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 4px solid black;
+    background: black;
+    z-index: 1000;
+    color: white;
+  }
+
+  h1 {
+    margin-top: 50px;
+  }
+
+  nav a {
+    color: white;
+  }
+
+  /* Mobile content wrapper */
+  #wrapper {
+    margin-top: 500px;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    /* prevent the wrapper from floating to one side */
+    float: none;
+  }
+
+  footer {
+    margin-top: 40px;
+    font-size: 12px;
+  }
 }

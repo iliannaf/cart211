@@ -92,9 +92,25 @@
             </a>
           </div>
           <div class="menu1">
+            <!-- The X button closes the mobile navigation -->
+            <button
+              type="button"
+              class="close-menu"
+              aria-label="Close Navigation Menu"
+            >
+              &times;
+            </button>
             <a href="stories.html" class="menu1">STORIES</a>
             <a href="#" class="menu1">SERIES</a>
             <a href="index.html" class="menu1">ABOUT</a>
+          </div>
+
+          <!-- Hamburger button: displayed on mobile and tablet screens -->
+          <div class="hamburger-menu">
+            <button type="button" aria-label="open navigation menu">
+              <!-- Font awesome displays the three horizontal menu lines -->
+              <span class="fa fa-bars" aria-hidden="true"></span>
+            </button>
           </div>
         </nav>
       </header>
@@ -296,6 +312,7 @@
           <!-- End of IMAGE GALLERY -->
         </article>
       </section>
+
       <footer>
         <section class="social-section">
           <div class="social=icons">
@@ -355,5 +372,38 @@
         </div>
       </footer>
     </div>
+
+    <!-- Javascript: makes the mobile hamburger menu open and close. 
+     JS adds or removes a CSS class. 
+     The CSS declares what the menu looks like when thaat class is present. -->
+
+    <script>
+      // Wait until the html document has finished loading.
+      // HTML this ensures the buttons exist before JS tries to select them.
+      document.addEventListener("DOMcontentLoaded", () => {
+        // Find the hamburger button inside the mobile menu container
+        const hamburgerButton = document.querySelector(
+          ".hamburger-menu button",
+        );
+
+        // Find the X button used to close the navigation menu
+        const closeButton = document.querySelector(".close-menu");
+
+        // Find container holding the navigation links
+        const menu1 = document.querySelector(".menu1");
+
+        // When the hamburger button is clicked,
+        // add the class "menu-deployed" to the navigation menu.
+        // Then CSS uses this class to make the menu visible.
+        hamburgerButton.addEventListener("click", () => {
+          menu1.classList.add("menu-deployed");
+        });
+
+        // When the X button is clicked, remove "menu-deployed" so that the menu closes.
+        closeButton.addEventListener("click", () => {
+          menu1.classList.remove("menu-deployed");
+        });
+      });
+    </script>
   </body>
 </html>
