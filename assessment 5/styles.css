@@ -392,7 +392,6 @@ footer a {
 /* social media container */
 .social-icons {
   display: flex;
-  flex-direction: row;
   /* Arrange these icons in a row */
   justify-content: center;
   align-items: center;
