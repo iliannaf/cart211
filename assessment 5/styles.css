@@ -158,6 +158,7 @@ nav {
 
 .logo {
   text-align: left;
+  padding-left: 30px;
 }
 
 nav a {
@@ -170,11 +171,11 @@ nav a:hover {
   color: darkgrey;
 }
 
-.menu1 {
+.menuI {
   text-align: right;
 }
 
-.menu1_active {
+.menuI_active {
   text-align: right;
   color: gray;
 }
@@ -526,6 +527,10 @@ such as the Tab key */
   }
 
   .hamburger-menu {
+    display: block;
+  }
+
+  .menu-deployed {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -557,12 +562,13 @@ such as the Tab key */
   }
 
   nav {
-    margin: 0;
+    margin: 0 auto;
     margin-bottom: 50px;
     width: 100%;
     box-sizing: border-box;
     padding: 10px 20px;
     line-height: 30px;
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -594,5 +600,97 @@ such as the Tab key */
   footer {
     margin-top: 40px;
     font-size: 12px;
+  }
+
+  /* Two column mobile image grid */
+
+  .pict {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    grid-auto-flow: row;
+    align-items: start;
+  }
+
+  /* reset desktop positioning and constrain each grid item.
+  the special character ^ is a called a caret.
+  in CSS, when used inside an attribute selector,
+  it means "start with".
+  ^= - means the attribute value must start with the specified text. */
+
+  .pict figure,
+  .pict [class^="im"] {
+    grid-column: auto;
+    grid-row: auto;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Make images fit inside their columns */
+
+  .pict img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    box-sizing: border-box;
+  }
+
+  /* prevent hover effect from creating horizontal overflow */
+
+  .pict figure:hover img,
+  .pict .im:hover {
+    transform: none;
+  }
+
+  /* keep hover text inside the image */
+  .pict .hover-text {
+    max-width: calc(100% - 20%);
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  @media (max-width: 600px) {
+    .pict {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5px;
+    }
+  }
+
+  /* mobile story layout */
+
+  .left_stories {
+    grid-column: 1 / 3;
+    margin: 0;
+    padding: 0;
+  }
+
+  .stories {
+    grid-column: 1 / 3;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.5em;
+  }
+
+  /* mobile book grid */
+
+  .books {
+    grid-template-columns: auto auto;
+    gap: 16px;
   }
 }
