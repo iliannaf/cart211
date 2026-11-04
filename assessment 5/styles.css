@@ -103,6 +103,10 @@ body {
   display: none;
 }
 
+.close-menu:hover {
+  cursor: pointer;
+}
+
 /* Main Content and headings */
 
 #wrapper {
