@@ -558,6 +558,18 @@ such as the Tab key */
     white-space: normal;
   }
 
+  /* Responsive button rows */
+
+.button-row {
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button-row .custom-button {
+  width: 30%;
+  min-width: 100px;
+}
+
   @media (max-width: 600px) {
     .pict {
       grid-template-columns: repeat(2, minmax(0, 1fr));
