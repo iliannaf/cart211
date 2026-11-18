@@ -53,7 +53,7 @@ header {
   background: none;
   border: none;
   font-size: 2em;
-  color: rgb(21, 148, 160);
+  color: rgb(88, 54, 182);
 }
 
 .hamburger-menu button .fa-bars {
@@ -384,7 +384,7 @@ such as the Tab key */
   .menu1 a,
   .menu1 a:hover {
     text-decoration: none;
-    color: rgb(21, 148, 160);
+    color: rgb(88, 54, 182);
     background-color: transparent;
   }
 
@@ -415,7 +415,7 @@ such as the Tab key */
     top: 20px;
     right: 20px;
     font-size: 2em;
-    color: rgb(21, 148, 160);
+    color: rgb(88, 54, 182);
   }
 
   .hamburger-menu {
